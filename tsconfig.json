@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "AMD",
+    "lib": ["ES2019"],
+    "outDir": "./src/FileCabinet/SuiteScripts",
+    "rootDir": "./src/TypeScripts",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "types": ["node"]
+  },
+  "include": ["src/TypeScripts/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
