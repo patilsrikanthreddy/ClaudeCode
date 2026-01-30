@@ -2,16 +2,19 @@
   "compilerOptions": {
     "target": "ES2019",
     "module": "AMD",
-    "lib": ["ES2019"],
+    "lib": ["ES2019", "DOM"],
     "outDir": "./src/FileCabinet/SuiteScripts",
     "rootDir": "./src/TypeScripts",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "baseUrl": ".",
+    "paths": {
+      "N/*": ["node_modules/@hitc/netsuite-types/N/*"]
+    }
   },
-  "include": ["src/TypeScripts/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src/TypeScripts/**/*", "node_modules/@hitc/netsuite-types/**/*.d.ts"],
+  "exclude": ["node_modules/@hitc/netsuite-types/spec"]
 }

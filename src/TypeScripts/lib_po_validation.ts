@@ -163,7 +163,7 @@ export function checkUniqueness(
         });
 
         const poSearch = search.create({
-            type: recordType as search.Type,
+            type: recordType as unknown as search.Type,
             filters: [
                 ['tranid', search.Operator.IS, poNumber],
                 'AND',
@@ -226,7 +226,7 @@ export function generatePONumber(
 
         // Search for highest PO number with current prefix
         const poSearch = search.create({
-            type: recordType as search.Type,
+            type: recordType as unknown as search.Type,
             filters: [
                 ['tranid', search.Operator.STARTSWITH, `${config.autoPrefix}-${currentYear}-`],
                 'AND',

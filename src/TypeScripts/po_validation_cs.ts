@@ -246,7 +246,7 @@ export function saveRecord(context: EntryPoints.Client.saveRecordContext): boole
 
         // Check uniqueness if configured
         if (PO_CONFIG.CHECK_UNIQUENESS) {
-            const recordId = currentRecord.id;
+            const recordId = currentRecord.id ? currentRecord.id.toString() : undefined;
 
             if (!checkPOUniqueness(poNumber, recordId)) {
                 ui.alert({
